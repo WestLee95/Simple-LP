@@ -6,21 +6,78 @@
     <script src="//cdn.tailwindcss.com"></script>
     <title>UHB</title>
     <style>
-        body {
-      background-color: #012B1B;
-    }
-
-    .text-font {
-        font-family: "Hina Mincho", serif;
-        font-weight: 400;
-        font-style: normal;
-        color: #EBE0D5;
+    body {
+        background: rgb(116, 116, 116);
     }
 
     .text-font2{
-        font-family: "Inter", sans-serif;
+        font-family: "Hina Mincho", serif;
         font-weight: 400;
         font-style: normal;
+        position: absolute;
+        bottom: 20px;
+
+    }
+
+    .div1{
+        margin-bottom: -40px;
+    }
+    .div2{
+        position: absolute;
+        bottom: 100px;
+        left: 50px;
+    }
+    .div3{
+        position: absolute;
+        bottom: 230px;
+        left: 100px;
+    }
+
+    .lineup{
+        align-items: flex-end;
+        position: relative;
+    }
+    .lineup1{
+        align-items: flex-end;
+        position: relative;
+    }
+    .lineup2{
+        align-items: flex-end;
+        position: relative;
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+            }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+            }
+    }
+
+    .slide{
+        animation: slideInFromRight  2s ease-in-out;
+    }
+    .slide1{
+        animation: slideInFromRight  2.8s ease-in-out;
+    }
+    .slide2{
+        animation: slideInFromRight  3.6s ease-in-out;
+    }
+
+    .fade-in {
+          animation: fadeIn 7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+             opacity: 0;
+            }
+        to {
+            opacity: 1;
+            }
     }
 
     @keyframes scale-in-bottom {
@@ -36,22 +93,48 @@
     }
 
     .animate-scale-in-bottom {
-        animation: scale-in-bottom 1s ease-in-out;
+        animation: scale-in-bottom 2s ease-in-out;
+    }
+    .absolute-image{
+        position: absolute;
+        left: 555px;
     }
 
     .animate-scale-in-bottom2 {
-        animation: scale-in-bottom 1.4s ease-in-out;
+        animation: scale-in-bottom 2.8s ease-in-out;
+    }
+    .absolute-image2{
+        position: absolute;
+        top: 120px;
+        left: 220px;
     }
 
     .animate-scale-in-bottom3 {
-        animation: scale-in-bottom 1.8s ease-in-out;
+        animation: scale-in-bottom 3.6s ease-in-out;
+        align-items: flex-end;
+        position: relative;
+    }
+    .absolute-image3{
+        position: absolute;
+        top: 90px;
+        left: 300px;
     }
 
-    .skewed-element {
+    .liner{
+        font-family: "Hina Mincho", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #000000;
+        font-size: 4.75rem;
+        transform: skewX(10deg) skewY(2deg);
+    }
+    
+    .liner:first-letter{
         transform: skewX(10deg) skewY(2deg);
         font-size: 14rem;
-        color: #F6E875;
+        color: #ffffff;
     }
+
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,34 +154,44 @@
 
           <!--Links-->
           <div class="relative flex gap-6 items-center">
-            <a href="#" class="text-3xl text-yellow-400 
+            <a href="#" class="text-3xl text-black 
             hover:text-red-100 text-font">Login</a>
 
-            <a href="#" class="text-3xl text-yellow-400 
+            <a href="#" class="text-3xl text-black 
             hover:text-red-100 text-font">Sign Up</a>
           </div>
         </div>
     </header>
-    <section  class="mx-auto py-20" style="max-width: 1150px">
+
+    <section  class="mx-auto mt-10 h-[1100px]" style="max-width: 1450px">
         <div class="grid grid-cols-2 items-center h-full">
-            <div>
-                <div class="animate-scale-in-bottom text-6xl text-font">
-                    <span class="skewed-element">U</span>niversity</div>
-                <div class="animate-scale-in-bottom2 text-6xl pl-20 text-font">
-                    <span class="skewed-element">H</span>ostel</div>
-                <div class="animate-scale-in-bottom3 text-6xl pl-40 text-font">
-                    <span class="skewed-element">B</span>ooking</div>
+            <div class="relative">
+                
+                <div class="div1 w-[400px] lineup flex">
+                    <p class="liner animate-scale-in-bottom">U</p>
+                    <img class="slide w-[400px] h-[220px]" src="assets/1.png" alt="">
+                </div>
+                <div class="div2 lineup1 flex">
+                    <p class="liner animate-scale-in-bottom2 pl-20">H</p>
+                    <img class="slide1 absolute-image2 [400px] h-[220px]" src="assets/2.png" alt="">
+                </div>
+                <div class="div3 lineup2 flex">
+                    <p class="liner animate-scale-in-bottom3 pl-40">B</p>
+                    <img class="slide2 absolute-image3 w-[400px] h-[300px]" src="assets/ooking.png" alt="">
+                </div>
             </div>
 
-            <div>
-                <div class="text-4xl leading-tight mb-7 text-slate-900 text-white text-font2">
+            <div class="relative">
+                <div class="fade-in text-5xl leading-tight mb-7 text-slate-900 text-white text-font2">
                     Manage room assignments,
-                    track availability, and streamline
-                    the booking process for students
-                    and administrators alike.</div>
+                        track availability, and streamline
+                        the booking process for students
+                        and administrators alike.
+                </div>
             </div>
 
         </div>
+        
 
     </section>
     
