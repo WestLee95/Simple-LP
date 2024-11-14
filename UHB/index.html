@@ -7,7 +7,11 @@
     <title>UHB</title>
     <style>
     body {
-        background: rgb(116, 116, 116);
+        background: #13221c;
+    }
+
+    .text-font0{
+        color: #f6e875;
     }
 
     .text-font2{
@@ -95,18 +99,19 @@
     .animate-scale-in-bottom {
         animation: scale-in-bottom 2s ease-in-out;
     }
-    .absolute-image{
+    .absolute-text{
         position: absolute;
-        left: 555px;
+        left: 165px;
+        bottom: 90px;
     }
 
     .animate-scale-in-bottom2 {
         animation: scale-in-bottom 2.8s ease-in-out;
     }
-    .absolute-image2{
+    .absolute-text2{
         position: absolute;
-        top: 120px;
-        left: 220px;
+        top: 95px;
+        left: 270px;
     }
 
     .animate-scale-in-bottom3 {
@@ -114,25 +119,26 @@
         align-items: flex-end;
         position: relative;
     }
-    .absolute-image3{
+    .absolute-text3{
         position: absolute;
         top: 90px;
-        left: 300px;
+        left: 320px;
     }
 
-    .liner{
+    .liner1{
         font-family: "Hina Mincho", serif;
-        font-weight: 400;
+        font-weight: 100;
         font-style: normal;
-        color: #000000;
-        font-size: 4.75rem;
+        color: #eae0d5;
+        font-size: 6.75rem;
         transform: skewX(10deg) skewY(2deg);
     }
     
-    .liner:first-letter{
+    .liner0{
         transform: skewX(10deg) skewY(2deg);
         font-size: 14rem;
-        color: #ffffff;
+        font-weight: 200;
+        color: #f6e875;
     }
 
     </style>
@@ -144,7 +150,7 @@
 <body>
     <header class="absolute w-full p-6 z-10">
         <div class="max-w-[1440px] mx-auto flex 
-            item-center justify-between text-yellow-400">
+            item-center justify-between text-font0">
 
           <!--Logo-->
           
@@ -154,11 +160,11 @@
 
           <!--Links-->
           <div class="relative flex gap-6 items-center">
-            <a href="#" class="text-3xl text-black 
-            hover:text-red-100 text-font">Login</a>
+            <a href="#" class="text-3xl
+            hover:text-white text-font">Login</a>
 
-            <a href="#" class="text-3xl text-black 
-            hover:text-red-100 text-font">Sign Up</a>
+            <a href="#" class="text-3xl
+            hover:text-white text-font">Sign Up</a>
           </div>
         </div>
     </header>
@@ -168,16 +174,16 @@
             <div class="relative">
                 
                 <div class="div1 w-[400px] lineup flex">
-                    <p class="liner animate-scale-in-bottom">U</p>
-                    <img class="slide w-[400px] h-[220px]" src="assets/1.png" alt="">
+                    <p class="liner0 animate-scale-in-bottom font-thin">U</p>
+                    <p class="slide liner1 absolute-text">niversity</p>
                 </div>
                 <div class="div2 lineup1 flex">
-                    <p class="liner animate-scale-in-bottom2 pl-20">H</p>
-                    <img class="slide1 absolute-image2 [400px] h-[220px]" src="assets/2.png" alt="">
+                    <p class="liner0 animate-scale-in-bottom2 pl-20">H</p>
+                    <p class="slide1 liner1 absolute-text2">ostel</p>
                 </div>
                 <div class="div3 lineup2 flex">
-                    <p class="liner animate-scale-in-bottom3 pl-40">B</p>
-                    <img class="slide2 absolute-image3 w-[400px] h-[300px]" src="assets/ooking.png" alt="">
+                    <p class="liner0 animate-scale-in-bottom3 pl-40">B</p>
+                    <p class="slide2 liner1 absolute-text3">ooking</p>
                 </div>
             </div>
 
