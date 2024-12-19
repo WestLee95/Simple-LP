@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>   
+  <script src="main.js" defer></script>
+
+  <style>
+    /*Menu Btn*/
+.menu-btn{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: all 0.25 ease;
+    cursor: pointer;
+}
+
+.menu-btn-top,
+.menu-btn-middle,
+.menu-btn-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color:#ffffff;
+    transform: rotate(0); 
+    transition: all 0.3s ease;
+ }
+
+.menu-btn-middle{
+    transform: translateY(7px);
+}
+
+.menu-btn-bottom{
+    transform: translateY(14px);
+}
+
+.open .menu-btn-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .menu-btn-middle{
+    display: none;
+}
+
+.open .menu-btn-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.menu{
+    display: none;
+}
+  </style>
+
+</head>
+<body class="min-w-[300px] h-screen overflow-hidden">
+  <!--Navbar-->
+    <header class="absolute w-full p-6 z-10">
+        <div class="max-w-[1440px] mx-auto flex 
+            items-center justify-between text-white">
+
+            <!--Logo-->
+            <a class="text-2xl" href="#"> ADVENTURE <b>NOW</b></a>
+
+            <!--Links-->
+            <div class="relative hidden md:flex gap-6 items-center">
+                <a href="#" class="text-white uppercase 
+                hover:text-orange-400">Home</a>
+
+                <a href="#" class="text-white uppercase 
+                hover:text-orange-400">Stories</a>
+
+                <a href="#" class="text-white uppercase 
+                hover:text-orange-400">Trips</a>
+
+                <a href="#" class="text-white uppercase 
+                hover:text-orange-400">Contact</a>
+                <!--SearchBtn-->
+                    <div id="search-btn" class="flex justify-center items-center">
+                <ion-icon name="search-outline" 
+                class="text-2xl cursor-pointer hover:text-orange-400"></ion-icon>
+                    </div>
+                <!--SearchBox-->
+                <div id="search-box" class="hidden absolute top-10 right-0">
+                    <div id="input-box" class="p-3 bg-white rounded-full
+                                                opacity-0 translate-y-10 transition duration-200">
+                        <input type="text" placeholder="Where to..."
+                        class="focus:outline-none text-black">
+                    </div>    
+                </div>
+            </div>
+
+            <!--Menu Button-->
+            <div id="menu-btn" class="md:hidden">
+                <img src="images/2.png" alt="Image 1" id="image1" class="w-[80px] h-[80px] object-cover">
+                <img src="images/1.png" alt="Menu" id="menu" class="menu w-[80px] h-[80px] object-cover">
+            </div>
+        </div>
+
+        <!--Mobile Menu-->
+        <div class="md:hidden">
+            <div id="mobile-menu" 
+                        class="hidden left-6 right-6 flex flex-col
+                        items-center gap-6 mt-10 p-6 font-bold bg-white/30
+                        backdrop-blur rounded-lg">
+                <a href="#" class="text-white uppercase 
+                    hover:text-orange-400">Home</a>
+                <a href="#" class="text-white uppercase 
+                    hover:text-orange-400">Stories</a>
+                <a href="#" class="text-white uppercase 
+                    hover:text-orange-400">Trips</a>
+                <a href="#" class="text-white uppercase 
+                    hover:text-orange-400">Contact</a>
+
+                    <div id="input-box" class="w-full p-3 bg-white rounded-full">
+                        <input type="text" placeholder="Where to..."
+                        class="focus:outline-none text-black">
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative w-full
+        h-screen bg-[url('images/3.jpg')] bg-black/50 bg-blend-multiply bg-center
+        bg-cover bg-no-repeat flex items-center">
+
+        <!--Hero content-->
+        <div class="container mx-auto max-w-[1200px] text-white 
+                p-4 md:p-8 xl:p-0 items-center text-center md:text-left">
+            <p class="text-3xl md:text-[50px] font-serif leading-tight tracking-wider">
+                Experience Alps <br> 
+                in a new perspective</p>
+            
+            <div class="hidden md:flex items-center mb-8 gap-4">
+                <ion-icon class="text-2xl" name="ellipsis-horizontal"></ion-icon>
+                <span class="text-sm uppercase text-gray-300 cursor-pointer">
+                    read more</span>
+            </div>
+
+            <a href="#" class="inline-block mt-6 py-3 px-6 font-bold
+                bg-orange-400 text-sm uppercase rounded-full
+                tracking-widest hover:scale-110 active:scale-95
+                transition duration-150">
+                    get started</a>
+        </div>
+
+        <!--Social links-->
+        <div class="absolute bottom-4 right-1/2 translate-x-1/2 
+                md:right-4 md:bottom-1/2 md:translate-x-0 md:translate-y-1/2">
+            <div class="text-white text-2xl p-4 flex md:flex-col gap-8 items-center">
+                <ion-icon class="cursor-pointer hover:scale-110" name="logo-facebook"></ion-icon>
+                <ion-icon class="cursor-pointer hover:scale-110" name="logo-twitter"></ion-icon>
+                <ion-icon class="cursor-pointer hover:scale-110" name="logo-instagram"></ion-icon>
+                <ion-icon class="cursor-pointer hover:scale-110" name="logo-linkedin"></ion-icon>
+            </div>
+        </div>
+
+
+        <!--Testimonials-->
+        <div class="hidden absolute bottom-4 w-full h-36 md:flex">
+
+            <!--Arrows-->
+            <div class="text-white text-6xl w-40 flex items-center justify-center">
+                <ion-icon class="cursor-pointer hover:scale-110" name="chevron-back"></ion-icon>
+                <ion-icon class="cursor-pointer hover:scale-110" name="chevron-forward"></ion-icon>
+            </div>
+
+            <!--Images-->
+            <div class="w-full h-full bg-gray-300 grid grid-cols-1 
+                    lg:grid-cols-2 xl:grid-cols-3 gap-4 p-4">
+
+                <!--IMG1-->
+                <div class="flex items-center gap-4">
+                    <img class="w-[100px] h-[100px] object-cover" 
+                    src="images/river.jpg" alt="">
+                
+                    <div>
+                        <h1 class="font-bold mb-4">Attraction 1</h1>
+                        <p class="text-gray-500">Rolling hills with vibrant wildflowers 
+                            under a clear blue sky.</p>
+                    </div>
+                </div>
+                
+                <!--IMG2-->
+                <div class="hidden lg:flex items-center gap-4">
+                    <img class="w-[100px] h-[100px] object-cover" 
+                    src="images/snow.jpg" alt="">
+                
+                    <div>
+                        <h1 class="font-bold mb-4">Attraction 2</h1>
+                        <p class="text-gray-500">A towering peak, 
+                            capped with pristine white snow.</p>
+                    </div>
+                </div>
+
+                <!--IMG3-->
+                <div class="hidden xl:flex items-center gap-4">
+                    <img class="w-[100px] h-[100px] object-cover" 
+                    src="images/road.jpg" alt="">
+                
+                    <div>
+                        <h1 class="font-bold mb-4">Attraction 3</h1>
+                        <p class="text-gray-500">A winding, treacherous path 
+                            climbs steeply towards this peak.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </section>
+    </main>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
