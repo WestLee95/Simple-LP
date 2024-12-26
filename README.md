@@ -1,5 +1,9 @@
 # Simple-LP
 
+![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=white)
+
 Welcome to **Simple-LP**, a collection of folders featuring diverse types of landing pages. This repository is designed to showcase my skills. Each folder contains a distinct landing page type, showcasing different layouts and designs.
 
 ## Folder Structure
