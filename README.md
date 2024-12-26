@@ -1,5 +1,7 @@
 # Simple-LP
 
+![HTML, CSS, JS GIF](https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif?cid=790b7611smbz80sr2cfwudrsa9wfij2e5m8t4l8ubqcsys37&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+
 ![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=white)
