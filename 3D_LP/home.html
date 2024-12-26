@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First 3D Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Text Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Cutive&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            color: #BD5404;
+        }
+
+        .logo1 {
+            font-family: 'Chonburi', cursive;
+            position: absolute;  /* Make the text element absolutely positioned */
+            top: 10%;  /* Position the text from the top */
+            left: 3%;  /* Position the text from the left */
+            z-index: 1;
+            color: #FFF7F7;
+        }
+        .logo2 {
+            font-family: 'Chonburi', cursive;
+            position: absolute;  /* Make the text element absolutely positioned */
+            top: 10%;  /* Position the text from the top */
+            left: 7%;  /* Position the text from the left */
+            z-index: 1;
+            color: #011A01;
+        }
+        .social{
+            position: absolute;
+            top: 10%;
+            right: 14%;
+            z-index: 1;
+        }
+        .hero {
+            font-family: 'Cutive', serif;
+            position: absolute;
+            font-size: 3.5em;
+            color: #FFF7F7;
+            height: 600px;
+            top: 30%;
+            left: 3%;
+        }
+        .text1{
+            font-family: 'Chonburi', cursive;
+            font-size: 4.5em;
+            color: #011A01;
+        }
+        .button{
+            background-color: #FFF7F7;
+            color: #011A01;
+        }
+        .Model{
+            position: absolute;
+            top: 0;
+            left: 29%;
+            width: 71%;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+<body class="bg-orange-600 w-full h-screen">
+    <header> 
+        <!--Logo-->  
+        <div class="text-5xl">
+            <h1 class="logo1">RE</h1>
+            <h1 class="logo2">BOOT</h1>
+        </div>
+
+        <!--Social Media-->
+        <div class="social w-full gap-4 w-[50px] h-[50px]">
+            <div class="flex flex-row gap-4">    
+                <img src="images/insta.png" alt="">
+                <img src="images/x.png" alt="">
+                <img src="images/in.png" alt="">
+                <img src="images/fb.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <!--Hero Text-->
+    <div class="hero flex flex-col gap-y-1">
+        <div>
+            <span class="text-7xl text1">C</span>ode<br>
+        </div>
+        <div>
+            <span class="text-7xl text1">C</span>reativity<br>
+        </div>
+        <div>
+            <span class="text-7xl text1">C</span>harisma<br>
+        </div>
+        <div>
+            <button class="button inline-block pt-4 pl-3 pr-3 text-3xl
+            rounded-full tracking-widest hover:scale-110 active:scale-95
+            transition duration-150">Get Started</button>
+        </div>
+    </div>
+
+    <!--3D Model-->
+   <div class="Model"> 
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/3mRXOSbNMS9wEdj1/scene.splinecode"></spline-viewer>
+   </div>
+</body>
+</html>
